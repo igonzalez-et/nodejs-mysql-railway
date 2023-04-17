@@ -11,7 +11,6 @@ app.get("/",(req, res)=> {
 
 app.get("/ping",async (req, res)=> {
     const [result] = await pool.query(`SELECT "hello world" as RESULT;`);
-    console.log(result);
     res.json(result[0]);
 })
 
